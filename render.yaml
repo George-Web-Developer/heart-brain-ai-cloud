@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: heart-brain-ai
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: CLOUD_MINIMAL_MODELS
+        value: "1"
+      - key: ENABLE_DEEP_LEARNING
+        value: "1"
+      - key: OMP_NUM_THREADS
+        value: "1"
+      - key: OPENBLAS_NUM_THREADS
+        value: "1"
+      - key: MKL_NUM_THREADS
+        value: "1"
